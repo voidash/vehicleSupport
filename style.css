@@ -183,14 +183,59 @@ nav a:hover {
     margin: 1rem 0;
 }
 
-.price-card ul {
-    list-style: '✓';
-    padding-left: 1.5rem;
+.service-card {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.price-card li {
-    margin-bottom: 0.5rem;
+.service-card:hover {
+    transform: translateY(-5px);
 }
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.ai-section p {
+    font-size: 1.1rem;
+}
+
+.ai-form {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#ai-photo-upload {
+    color: var(--primary-color);
+}
+
+#ai-visualize-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* Add a tooltip for the disabled button */
+#ai-visualize-btn[disabled]:hover::after {
+    content: 'Feature Coming Soon!';
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transform: translate(-50%, -150%);
+}
+
 
 .info-section p {
     max-width: 800px;
