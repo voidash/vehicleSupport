@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: #f0f0f0;
+    --accent-color: #00aaff;
+    --text-color: #333;
+    --bg-color: #f4f4f9;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    margin-bottom: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 6rem 2rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group select {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    background: var(--secondary-color);
+}
+
+.btn {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    align-self: flex-end;
+}
+
+.btn:hover {
+    background: #0088cc;
+}
+
+.cards-section, .info-section {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+}
+
+.cards-section h2, .info-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card, .price-card {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover, .price-card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content, .price-card {
+    padding: 1.5rem;
+}
+
+.card-content h3, .price-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.price-card .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 1rem 0;
+}
+
+.price-card ul {
+    list-style: '✓';
+    padding-left: 1.5rem;
+}
+
+.price-card li {
+    margin-bottom: 0.5rem;
+}
+
+.info-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-section a {
+    color: var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--primary-color);
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .booking-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-group {
+        width: 80%;
+    }
+    .btn {
+        width: 80%;
+        padding: 1rem;
+    }
+}
